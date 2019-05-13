@@ -1,0 +1,18 @@
+title: Snow Shredders
+email: tsekob@gmail.com
+description: Shredding...
+baseurl: ""
+url: ""
+twitter_username: 
+github_username:
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - _assets

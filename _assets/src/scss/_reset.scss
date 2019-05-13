@@ -1,0 +1,20 @@
+/*
+ * Box sizing with inheritance 
+ */
+
+ *, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box; 
+}
+
+/*
+ * Reset whitespace
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+}

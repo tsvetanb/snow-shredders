@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{{ site.title }}</title>
+		<link rel="stylesheet" href="/css/site.css" type="text/css" />
+		<link href="https://fonts.googleapis.com/css?family=Modak|Source+Sans+Pro" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	</head>
+	<body>
+		<input type="checkbox" name="toggle-main-menu" id="toggle-main-menu" />
+		<header class="header-main">
+			<span class="header-img">
+				<img alt src="https://images.unsplash.com/photo-1519931760384-a96fedd8dfa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1200&q=80">
+			</span>
+			<h1><a href="/" class="title">{{ site.title }}</a></h1>
+			{% include navigation.html %}
+		</header>
+
+		<div class="site-content">
+
+			<main class="site-main">
+				{% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+				{{ content }}
+			</main>
+
+		</div>
+
+		<footer class="footer-main">
+			<span class="footer-img">
+				<img alt src="https://images.unsplash.com/photo-1519931760384-a96fedd8dfa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1200&q=80">
+			</span>
+			<nav class="footer">
+				<ul>
+					<li class="nav-text">
+						<p>Copyright © 2019 Snow shredders magazine. All rights reserved.</p>
+					</li>
+					<li class="nav-right">
+						<a href="/about/">About</a>
+					</li>
+					<li class="nav-right">
+						<a href="/contacts/">Contacts</a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+		
+	</body>
+</html>

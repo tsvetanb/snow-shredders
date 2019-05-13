@@ -1,0 +1,186 @@
+$text-color: #666;
+$footer-text-color: #AAA;
+
+.articles {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    @media (max-width: 1200px) {
+        grid-template-columns: 50% 50%;
+    }
+    @media (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+    }
+    @media (min-width: 600px) {
+        article:nth-child(1){
+            font-size: 1.1em;
+            grid-column-start: 1;
+            grid-column-end: span 2;
+            border-bottom: 1px solid $footer-text-color;
+        }
+    }
+    @media (min-width: 1200px) {
+        article:nth-child(2), article:nth-child(3), article:nth-child(4) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            font-size: 0.4em;
+            grid-row-end: span 1;
+            grid-column-start: 3;
+            grid-column-end: span 1;
+            section {
+                width: 50%;
+                padding-right: 1em;
+            }
+            header {
+                width: 50%;
+                text-align: right;
+                margin: auto 0;
+            }
+            span {
+                padding-top: 80%;
+            }
+        }
+        article:nth-child(1){
+            font-size: 1.1em;
+            grid-column-start: 1;
+            grid-column-end: span 2;
+            grid-row-start: 1;
+            grid-row-end: span 3;
+            border-right: 1px solid $footer-text-color;
+            border-bottom: 1px solid $footer-text-color;
+        }
+        article:nth-child(2){
+            grid-row-start: 1;
+        }
+        article:nth-child(3){
+            grid-row-start: 2;
+        }
+        article:nth-child(4){
+            grid-row-start: 3;
+            border-bottom: 1px solid $footer-text-color;
+        }
+    }
+    
+    p {
+        padding-bottom: 0.2em;
+    }
+
+    section {
+        a, span, img, iframe {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        font-size: 0.5em;
+        @media (max-width: 600px) {
+            padding: 2em 1em;
+            font-size: 0.6em;
+        }
+        h1, h2, h3, h4 {            
+            a {
+                color: $text-color;
+            }
+        }
+        section {
+            padding-bottom: 1em;
+            order: 1;
+        }
+        header {
+            order: 2;
+            text-align: center;
+        }
+        footer {
+            margin-top: auto;
+            font-size: 0.7rem;
+            width: 100%;
+            order: 3;
+            color: $footer-text-color;
+            p {
+                float: right;
+            }
+            a {
+                color: $text-color;
+            }
+        }
+        a {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+article.single {
+    header {
+        font-weight: bold;
+        text-align: center;
+        font-style: italic;
+    }
+    section, span {
+        display: block;
+        width: 100%;
+    }
+    footer {
+        font-size: 0.9rem;
+        width: 100%;
+        color: $footer-text-color;
+        p {
+            float: right;
+        }
+        a {
+            color: $text-color;
+        }
+    }
+    section p::first-letter {
+        text-transform: uppercase;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding-left: 1em;
+    }
+
+    p, .article-video, .article-photo {
+        padding: 0.8em 0;
+    }
+    @media (min-width: 600px) {
+        .article-video, .article-photo {
+            width: 50%;
+            float: right;
+            padding-left: 0.5em;
+        }
+    }
+}
+
+span.article-media {
+    padding-top: 56.25%;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    iframe {
+        position: absolute;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+span.article-media-tall {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
