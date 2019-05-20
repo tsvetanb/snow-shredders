@@ -3,9 +3,9 @@ $footer-text-color: #AAA;
 
 .articles {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: repeat(3, 1fr);
     @media (max-width: 1200px) {
-        grid-template-columns: 50% 50%;
+        grid-template-columns: repeat(2, 1fr);
     }
     @media (max-width: 600px) {
         display: flex;
@@ -27,6 +27,7 @@ $footer-text-color: #AAA;
             grid-row-end: span 1;
             grid-column-start: 3;
             grid-column-end: span 1;
+            line-height: 1.5;
             section {
                 width: 50%;
                 padding-right: 1em;

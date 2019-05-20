@@ -53,8 +53,8 @@ header.header-main {
     }
 
     .title {
-        color: black;
-        text-shadow: 4px 4px white;
+        color: white;
+        text-shadow: 4px 4px black, 0 0 10px blue ;
         text-decoration: none;
         font-family: 'Modak', cursive;
         font-weight: 100;
@@ -66,8 +66,8 @@ header.header-main {
             font-size: 0.8em;
         }
         &:hover {
-            color: white;
-            text-shadow: 4px 4px black;
+            color: black;
+            text-shadow: 4px 4px white;
         }
     }
 }
